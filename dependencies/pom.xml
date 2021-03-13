@@ -11,6 +11,7 @@
 
     <properties>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-mapper.version>2.1.5</spring-mapper.version>
     </properties>
 
     <licenses>
@@ -37,6 +38,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${spring-mapper.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
