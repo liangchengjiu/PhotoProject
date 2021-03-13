@@ -18,6 +18,8 @@
 
     <modules>
         <!-- 工程模块请随着项目的不断完善自行添加 -->
+        <module>dependencies</module>
+        <module>spring-security-oauth2</module>
     </modules>
 
     <properties>
@@ -37,9 +39,9 @@
 
     <developers>
         <developer>
-            <id>liwemin</id>
-            <name>Lusifer Lee</name>
-            <email>lee.lusifer@gmail.com</email>
+            <id>dawson</id>
+            <name>dawsom Ricardo</name>
+            <email>dawson_ricardo@gmail.com</email>
         </developer>
     </developers>
 
@@ -93,9 +95,9 @@
                         <executions>
                             <execution>
                                 <id>enforce-rules</id>
-<!--                                <goals>-->
-<!--                                    <goal>enforce</goal>-->
-<!--                                </goals>-->
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
                                 <configuration>
                                     <rules>
                                         <bannedDependencies>
