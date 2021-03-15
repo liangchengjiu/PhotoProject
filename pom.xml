@@ -11,15 +11,18 @@
     </parent>
 
     <groupId>com.dawson</groupId>
-    <artifactId>spring-boot-samples</artifactId>
+    <artifactId>photo-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 <!--    <url>http://www.funtl.com</url>-->
 
     <modules>
         <!-- 工程模块请随着项目的不断完善自行添加 -->
-        <module>dependencies</module>
-        <module>spring-security-oauth2</module>
+<!--        <module>dependencies</module>-->
+<!--        <module>commons</module>-->
+<!--        <module>spring-security-oauth2</module>-->
+<!--        <module>provider</module>-->
+<!--        <module>consumer</module>-->
     </modules>
 
     <properties>
@@ -49,7 +52,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.dawson</groupId>
-                <artifactId>spring-boot-samples-dependencies</artifactId>
+                <artifactId>photo-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

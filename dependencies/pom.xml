@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dawson</groupId>
-    <artifactId>spring-boot-samples-dependencies</artifactId>
+    <artifactId>photo-dependencies</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>http://www.funtl.com</url>
@@ -20,6 +20,7 @@
         <alibaba-spring-context-support.version>1.0.2</alibaba-spring-context-support.version>
         <mybatis-plus-version>3.3.2</mybatis-plus-version>
         <freemarker.version>2.3.28</freemarker.version>
+        <hutool-version>5.5.8</hutool-version>
 
     </properties>
 
@@ -113,11 +114,20 @@
                 <version>${mybatis-plus-version}</version>
             </dependency>
             <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

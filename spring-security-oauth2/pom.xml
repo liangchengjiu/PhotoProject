@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>com.dawson</groupId>
-        <artifactId>spring-boot-samples</artifactId>
+        <artifactId>photo-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -15,6 +15,8 @@
 
     <modules>
         <!-- 工程模块请随着项目的不断完善自行添加 -->
+        <module>spring-security-oauth2-server</module>
+        <module>spring-security-resource</module>
     </modules>
 
     <licenses>

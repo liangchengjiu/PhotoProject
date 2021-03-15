@@ -7,7 +7,7 @@
         <artifactId>photo-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>photo-consumer</artifactId>
+    <artifactId>photo-commons</artifactId>
     <packaging>jar</packaging>
     <url>http://www.funtl.com</url>
     <inceptionYear>2021-Now</inceptionYear>
@@ -65,32 +65,35 @@
             <groupId>com.alibaba.spring</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
-        <!--引入dubbo-kryo依赖，启用 Kryo 高速序列化功能。在 Provider 和 Consumer 项目都要引入-->
+        <!-- Apache Dubbo End -->
+
+        <!-- 引入dubbo-kryo依赖，启用 Kryo 高速序列化功能。-->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-serialization-kryo</artifactId>
         </dependency>
-        <!-- Apache Dubbo End -->
-        <!-- Spring Cloud Alibaba Begin -->
+        <!-- dubbo-kryo End -->
+
+
+
+        <!-- mysql Begin -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- mysql end -->
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- Spring Cloud Alibaba End -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
 
-        <!-- Projects Begin -->
-        <dependency>
-            <groupId>com.dawson</groupId>
-            <artifactId>photo-commons</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dawson</groupId>
-            <artifactId>photo-provider-api</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <!-- Projects End -->
     </dependencies>
     <build>
         <plugins>
@@ -98,7 +101,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.apache.dubbo.consumer.ConsumerApplication</mainClass>
+                    <mainClass>com.funtl.apache.dubbo.provider.ProviderApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

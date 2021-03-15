@@ -41,7 +41,7 @@
         </dependency>
         <!-- Spring Boot End -->
         <!-- Apache Dubbo Begin -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
@@ -60,14 +60,19 @@
         <dependency>
             <groupId>com.alibaba.spring</groupId>
             <artifactId>spring-context-support</artifactId>
-        </dependency>
+        </dependency>-->
         <!--引入dubbo-kryo依赖，启用 Kryo 高速序列化功能。在 Provider 和 Consumer 项目都要引入-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-serialization-kryo</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- Apache Dubbo End -->
         <!-- Projects Begin -->
+        <dependency>
+            <groupId>com.dawson</groupId>
+            <artifactId>photo-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.dawson</groupId>
             <artifactId>photo-provider-api</artifactId>
