@@ -8,4 +8,6 @@ package com.dawson.provider.api;
  **/
 public interface EchoService {
     String echo(String string);
+
+    String sendMq(String string);
 }

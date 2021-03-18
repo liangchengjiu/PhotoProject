@@ -3,6 +3,15 @@ spring:
     name: photo-consumer
   main:
     allow-bean-definition-overriding: true
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host: /
+
 dubbo:
   scan:
     # 配置组件扫描，@Reference注解所在的包路径

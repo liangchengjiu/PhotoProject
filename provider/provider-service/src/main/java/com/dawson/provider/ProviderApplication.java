@@ -3,6 +3,7 @@ package com.dawson.provider;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @program: PhotoProject
@@ -11,7 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2021-03-14 02:49
  **/
 @SpringBootApplication
-@MapperScan("com.dawson.provider.service.sys.mapper")
+@MapperScan("com.dawson.provider.service")
+@ComponentScan(basePackages = {"com.dawson"})
 public class ProviderApplication {
 
     public static void main(String[] args) {

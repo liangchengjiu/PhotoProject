@@ -3,6 +3,8 @@ spring:
     name: photo-provider
   main:
     allow-bean-definition-overriding: true
+
+  # 配置数据库连接池
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +20,17 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+
+  # 配置rabbitMq 服务器
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host: /
+
+
 dubbo:
   scan:
     base-packages: com.dawson.provider.service
@@ -26,8 +39,12 @@ dubbo:
     port: -1
     serialization: kryo
   provider:
-    #    设置Dubbo负载均衡策略，轮询
+    # 设置Dubbo负载均衡策略，轮询
     loadbalance: roundrobin
+    # 设置全局超时
+    timeout: 60000
+    # 设置重试次数
+    retries: 0
   registry:
     address: nacos://localhost:8848
 
@@ -44,3 +61,15 @@ mybatis-plus:
       logic-not-delete-value: 1
       # 删除后
       logic-delete-value: 0
+
+#重试注解的配置项目
+ptoto:
+  retry:
+    enable: true
+    commonSystem: provider-service
+    defaultUser: ricaido
+    systemType: privider
+    mq:
+
+server:
+  port: 8090

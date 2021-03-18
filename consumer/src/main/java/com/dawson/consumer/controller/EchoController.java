@@ -1,6 +1,7 @@
 package com.dawson.consumer.controller;
 
 import com.dawson.provider.api.EchoService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2021-03-14 03:00
  **/
 
+@Slf4j
 @RefreshScope //配置动态刷新
 @RestController
 public class EchoController {
@@ -29,6 +31,12 @@ public class EchoController {
     @GetMapping(value = "/echo/{string}")
     public String echo(@PathVariable String string) {
         return echoService.echo(string) + ", " + username;
+    }
+
+    @GetMapping(value = "/sendMq/{string}")
+    public String sendMq(@PathVariable String string) {
+        log.info("============consumer=====");
+        return echoService.sendMq(string) + ", " + username;
     }
 }
 

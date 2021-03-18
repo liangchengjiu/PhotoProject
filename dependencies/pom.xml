@@ -21,6 +21,7 @@
         <mybatis-plus-version>3.3.2</mybatis-plus-version>
         <freemarker.version>2.3.28</freemarker.version>
         <hutool-version>5.5.8</hutool-version>
+        <rabbit-version>2.3.0.RELEASE</rabbit-version>
 
     </properties>
 
@@ -129,6 +130,13 @@
                 <version>${hutool-version}</version>
             </dependency>
 
+            <!-- RabbitMQ Being -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${rabbit-version}</version>
+            </dependency>
+            <!-- RabbitMQ Being -->
         </dependencies>
     </dependencyManagement>
 
