@@ -22,6 +22,7 @@
         <freemarker.version>2.3.28</freemarker.version>
         <hutool-version>5.5.8</hutool-version>
         <rabbit-version>2.3.0.RELEASE</rabbit-version>
+        <elasticsearch-version>6.5.4</elasticsearch-version>
 
     </properties>
 
@@ -130,13 +131,27 @@
                 <version>${hutool-version}</version>
             </dependency>
 
-            <!-- RabbitMQ Being -->
+            <!-- RabbitMQ Begin -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
                 <version>${rabbit-version}</version>
             </dependency>
-            <!-- RabbitMQ Being -->
+            <!-- RabbitMQ End -->
+
+            <!--elasticsearch Begin-->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch-version}</version>
+            </dependency>
+            <!--elasticsearch End-->
+
         </dependencies>
     </dependencyManagement>
 

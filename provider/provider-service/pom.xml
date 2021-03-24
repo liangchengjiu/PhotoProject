@@ -130,6 +130,18 @@
             <artifactId>freemarker</artifactId>
         </dependency>
         <!-- MyBatis-plus End-->
+
+        <!--elasticsearch Begin-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+        </dependency>
+        <!--elasticsearch End-->
+
     </dependencies>
     <build>
         <plugins>

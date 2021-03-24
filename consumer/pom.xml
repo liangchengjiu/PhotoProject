@@ -91,6 +91,13 @@
             <version>${project.parent.version}</version>
         </dependency>
         <!-- Projects End -->
+
+        <!-- springboot-data-elasticsearch 提供了面向对象的方式操作elasticsearch -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

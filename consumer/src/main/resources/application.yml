@@ -12,6 +12,16 @@ spring:
     #虚拟host 可以不设置,使用server默认host
     virtual-host: /
 
+  # ******************* elasticsearch ******************* #
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 192.168.48.131:9300
+      properties: { }
+  elasticsearch:
+    rest:
+      uris: [ "http://192.168.48.131:9200" ]  # 不配置该配置会报错: Elasticsearch health check failed
+
 dubbo:
   scan:
     # 配置组件扫描，@Reference注解所在的包路径
